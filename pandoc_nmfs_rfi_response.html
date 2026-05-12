@@ -1,0 +1,731 @@
+<h1
+id="public-comment-on-the-nmfs-advance-notice-of-proposed-rulemaking">Public
+Comment on the NMFS Advance Notice of Proposed Rulemaking</h1>
+<style>
+  table, th, td {
+    border: 1px solid black;
+  }
+</style>
+<h2
+id="north-atlantic-right-whale-vessel-strike-reduction-rule-50-cfr-224.105">North
+Atlantic Right Whale Vessel Strike Reduction Rule (50 CFR 224.105)</h2>
+<p><strong>Federal Register Docket:</strong> NOAA-NMFS-2026-XXXX (ANPRM,
+March 2026) <strong>Submitting Author:</strong> [Submitter name,
+affiliation, contact] <strong>Date:</strong> [Submission date]
+<strong>Comment Period Closes:</strong> June 2, 2026</p>
+<p>## Executive Summary</p>
+<p>The empirical evidence and population-modeling results analyzed
+support <strong>retaining and expanding the existing mandatory speed
+rule</strong> rather than replacing it with a primarily technology-based
+or voluntary dynamic regime. Available detection technologies could
+augment but not replace the successful speed rule in a
+<strong>supportive regulatory architecture</strong> that:</p>
+<ol type="1">
+<li>Retains the mandatory 10-knot speed limit in Seasonal Management
+Areas (SMAs)</li>
+<li>Extends mandatory speed restrictions to vessels ≥ 35 ft (10.7 m) per
+the 2022 Preferred Alternative</li>
+<li>Layers a mandatory Dynamic Speed Zone (DSZ) program atop static
+SMAs, triggered by TRL-9 offboard detection (PAM, aerial surveys) and
+delivered via real-time electronic notification</li>
+<li>Codifies a calibrated safety-deviation provision (50 CFR 224.105(c))
+with class-specific parameters and standardized reporting</li>
+<li>Funds the unstudied vessel-avoidance-maneuver research gap as a
+near-term agency priority</li>
+<li>Incentivizes onboard detection technology adoption as a complement,
+not a replacement</li>
+</ol>
+<p>The North Atlantic right whale population numbered an estimated
+<strong>384 individuals at the start of 2024</strong> (NARW Consortium,
++10/-9 CI), a modest 7% recovery from the 2020 trough of 358 but well
+below biologically safe levels. Population viability modeling calibrated
+to the observed 2011–2024 trajectory (mean absolute error 2.0%)
+indicates the species has no margin for regulatory experimentation that
+depends on unproven detection-and-avoidance assumptions.</p>
+<hr />
+<h2 id="background-and-method">1. Background and Method</h2>
+<h3 id="the-2008-speed-rule">1.1 The 2008 Speed Rule</h3>
+<p>Under 50 CFR 224.105, most vessels ≥ 65 ft (19.8 m) piloting through
+designated Seasonal Management Areas (SMAs) along the U.S. East Coast
+must travel at 10 knots or less during specified seasonal periods.
+National Marine Fisheries Service (NMFS) implemented the rule in 2008
+(73 FR 60173) and removed the five-year sunset provision in 2013 (78 FR
+73726).</p>
+<h3 id="the-2008-voluntary-dma-2020-slow-zone-program">1.2 The 2008
+Voluntary DMA / 2020 Slow Zone Program</h3>
+<p>Concurrent with the speed rule, NMFS implemented a voluntary Dynamic
+Management Area (DMA) program, rebranded as Slow Zones in 2020,
+requesting voluntary 10-knot transits when sightings or acoustic
+detections indicate NARW aggregations outside SMA boundaries.</p>
+<h3 id="analytical-framework">1.3 Analytical Framework</h3>
+<p>The analysis that follows uses a Monte Carlo population viability
+model (<code>narw_model_v2a.py</code>) calibrated to:</p>
+<ul>
+<li><strong>Population estimates 2011–2024</strong> (NARW Consortium /
+NOAA Linden 2024 model)</li>
+<li><strong>MITRE/NOAA TRL Report MTR250363 (Nov 2025)</strong> for
+technology parameters</li>
+<li><strong>Vanderlaan &amp; Taggart (2007), Conn &amp; Silber (2013),
+Lisi et al. (2025)</strong> for speed–size–lethality</li>
+<li><strong>Blondin et al. (2025)</strong> for vessel-class encounter
+risk apportionment</li>
+</ul>
+<p>The model reproduces the observed 2011–2024 trajectory with
+<strong>mean absolute error 2.0% and maximum error 6.6%</strong> across
+three regimes before, during, and after the North American Right Whale
+Unusual Mortality Event (UME) between 2017-2020. The three regimes are
+labeled pre-UME 2011–2016; UME 2017–2020; recovery 2021–2024.</p>
+<hr />
+<h2 id="findings">2. Findings</h2>
+<h3 id="speed-rule-efficacy">2.1 Speed-Rule Efficacy</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Documented vessel-strike deaths/serious injuries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1998–2007 (pre-rule)</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>2008–2017 (post-rule)</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>Inside-SMA effectiveness has been demonstrated by Laist et al. (2014)
+and van der Hoop et al. (2015) — vessel-strike mortalities effectively
+dropped to near-zero <strong>inside</strong> active SMAs after 2008.
+Outside-SMA mortalities continued at roughly the pre-rule rate,
+demonstrating that protection is bounded by SMA geographic and temporal
+extent rather than whale presence.</p>
+<p>The variables of speed and size of the vessel compose the following
+conditional probabilities of lethality given that the vessel strikes a
+North American right whale.</p>
+<table>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 50%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Speed</th>
+<th>Size 20–108 m<br/>P(lethal | strike),</th>
+<th>Size ≥ 108 m <br/>P(lethal | strike)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 kts</td>
+<td><strong>27%</strong></td>
+<td>86%</td>
+</tr>
+<tr class="even">
+<td>14 kts</td>
+<td>73%</td>
+<td>91%</td>
+</tr>
+<tr class="odd">
+<td>16 kts</td>
+<td><strong>88%</strong></td>
+<td>93%</td>
+</tr>
+</tbody>
+</table>
+<p>For mid-class commercial vessels, the 10-knot limit converts a strike
+from ~88% lethal to ~27% lethal — <strong>a 3.3× reduction per
+encounter</strong>. Large ocean-going ships (≥ 108 m) operate in a
+mass-dominated regime in which speed reductions provide only marginal
+benefit (Lisi et al. 2025; Kelley et al. 2021); for these vessels,
+<strong>routing changes are the only means to protect the population of
+the whales</strong>.</p>
+<h3 id="compliance-performance">2.2 Compliance Performance</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Regime</th>
+<th>Approximate Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mandatory SMA rule (2008–2009)</td>
+<td>~50%</td>
+</tr>
+<tr class="even">
+<td>Mandatory SMA rule (2018–2019)</td>
+<td><strong>~81%</strong></td>
+</tr>
+<tr class="odd">
+<td>Voluntary DMA / Slow Zones</td>
+<td><strong>~10–30%</strong></td>
+</tr>
+<tr class="even">
+<td>Largest commercial vessels at four SE port entrances</td>
+<td><strong>&lt; 25%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The 50–60 percentage-point gap between mandatory and voluntary
+compliance gives the strongest empirical evidence
+<strong>against</strong> replacing the static SMA rule with a primarily
+voluntary dynamic regime. Mandatory SMA compliance has steadily improved
+(50% → 81%) over the rule’s first decade, indicating cultural
+normalization. That compliance <strong>is not at a hard
+ceiling</strong>.</p>
+<h3 id="detection-technology-maturity-mitre-trl-report">2.3 Detection
+Technology Maturity (MITRE TRL Report)</h3>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 72%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Technology</th>
+<th>TRL</th>
+<th>Avg detection<br/> probability</th>
+<th>Key limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Onboard</td>
+<td>Thermal/IR</td>
+<td>6</td>
+<td>35%</td>
+<td>Surface-only; degrades in fog/rain/seas</td>
+</tr>
+<tr class="even">
+<td>Onboard</td>
+<td>Visual Camera</td>
+<td>4</td>
+<td>8%</td>
+<td>Daytime only;<br/> AI-training gap</td>
+</tr>
+<tr class="odd">
+<td>Onboard</td>
+<td>Radar</td>
+<td>3</td>
+<td>5%</td>
+<td>High false-alarm rate</td>
+</tr>
+<tr class="even">
+<td>Onboard</td>
+<td>Active Acoustic</td>
+<td>3</td>
+<td>9%</td>
+<td>Range &lt; 1 km; <br/>few NARW studies</td>
+</tr>
+<tr class="odd">
+<td>Onboard</td>
+<td>PAM</td>
+<td>3</td>
+<td>5%</td>
+<td>Flow noise at speed;<br/> vocalization-dependent</td>
+</tr>
+<tr class="even">
+<td><strong>Offboard</strong></td>
+<td><strong>PAM (regional)</strong></td>
+<td><strong>9</strong></td>
+<td>n/a (zone trigger)</td>
+<td><strong>Mature</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Offboard</strong></td>
+<td><strong>Aerial survey</strong></td>
+<td><strong>9</strong></td>
+<td>n/a (zone trigger)</td>
+<td><strong>Mature</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Combined onboard detection probability: - Clear daylight: 71% -
+Fog/rain: 30% - Night/poor visibility: 24%</p>
+<p>After applying the 1.5 km range-sufficiency filter (the minimum
+warning distance needed to maneuver at 16 kts), <strong>effective
+detection drops to ~35%</strong>. With 50% assumed avoidance success,
+<strong>effective per-encounter protection is ~18%</strong> —
+substantially below the 73% lethality reduction the speed rule already
+delivers for mid-class vessels.</p>
+<h3 id="the-avoidance-maneuver-research-gap">2.4 The Avoidance-Maneuver
+Research Gap</h3>
+<p>The MITRE report’s most consequential finding is that <strong>vessel
+maneuvers in response to whale detections have never been studied or
+documented</strong>. The model therefore caps assumed avoidance-success
+probability at <code>MAX_AVOIDANCE_SUCCESS = 50%</code>; values above
+50% are not empirically defensible as field studies do not yet exist.
+Across the entire defensible 10%–50% sensitivity range, our simulation
+shows onboard technology underperforms the speed rule by <strong>12–14%
+on long-run population</strong>:</p>
+<p>The model emits the conditional probabilities of avoiding a whale
+once detected and the projected final population after 50 years and the
+difference compared to keeping the current speed limit.</p>
+<table>
+<thead>
+<tr class="header">
+<th>P(avoid|detect)</th>
+<th>Mean final pop</th>
+<th>Δ vs Speed Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10%</td>
+<td>546</td>
+<td>−88</td>
+</tr>
+<tr class="even">
+<td>20%</td>
+<td>548</td>
+<td>−86</td>
+</tr>
+<tr class="odd">
+<td>30%</td>
+<td>552</td>
+<td>−82</td>
+</tr>
+<tr class="even">
+<td>40%</td>
+<td>555</td>
+<td>−79</td>
+</tr>
+<tr class="odd">
+<td><strong>50%</strong> (cap)</td>
+<td><strong>560</strong></td>
+<td><strong>−74</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The policy gap varies by only ~14 whales across this entire band,
+indicating the speed rule’s superiority is <strong>robust to uncertainty
+in the unstudied avoidance parameter</strong>. This finding holds
+because the detect-then-maneuver chain has multiple failure modes
+(detection probability, range-sufficiency, decision time, hydrodynamic
+constraints, deep-draft / low-maneuverability physics) that speed
+reduction sidesteps simultaneously — an advantage that no level of
+avoidance success in the defensible range can recover.</p>
+<h3
+id="parametric-uncertainties-lead-to-higher-final-population-means.">2.5
+Parametric Uncertainties Lead to Higher Final Population Means.</h3>
+<ul>
+<li>The model optimistically assumes no UMEs that would disrupt the
+recovery rates.</li>
+<li>The model partitions the historical data into a shorter UME ending
+2020 and the recovery period commencing in 2021. NOAA’s current endpoint
+for the UME is set at 2026, therefore the model may produce higher
+estimates of North Atlantic right whales abundance.</li>
+</ul>
+<h3 id="year-population-projections">2.6 50-Year Population
+Projections</h3>
+<p>With recovery-phase parameters (the regime that has held since 2021),
+calibrated to reproduce 2011–2024 within 2.0% MAE:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Median final pop</th>
+<th>P(quasi-extinction &lt; 50)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Status-quo Speed Rule</td>
+<td><strong>635</strong></td>
+<td>0%</td>
+</tr>
+<tr class="even">
+<td>Onboard Tech (no speed limit)</td>
+<td>560</td>
+<td>0%</td>
+</tr>
+<tr class="odd">
+<td>Enhanced Regional (DMA + emerging tech)</td>
+<td>583</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<p>The status-quo speed rule produces the highest long-run population.
+Removing the speed rule and substituting onboard detection technology
+costs ~75 whales over 50 years — a 12% reduction. The Enhanced Regional
+scenario sits between the two: better than removing the rule, but worse
+than universal 10-knot enforcement.</p>
+<hr />
+<h2 id="responses-to-specific-nmfs-rfi-topics">3. Responses to Specific
+NMFS RFI Topics</h2>
+<h3 id="vessel-size-specific-risk-assessment">3.1 Vessel-Size-Specific
+Risk Assessment</h3>
+<p><strong>Position:</strong> The available evidence argues
+<em>against</em> loosening the rule for any vessel class.</p>
+<ul>
+<li><strong>≥ 108 m (≈ 350 ft) ocean-going ships</strong> (Lisi et
+al. 2025) operate in a mass-dominated lethality regime where speed
+reductions provide diminishing returns. Strike probability is also
+elevated by deep draft (10–15 m) that prevents whale dive-avoidance and
+by stopping distances of 1–2 km that preclude evasive maneuvering, thus
+routing changes and DSZs are the principal avoidance options.</li>
+<li><strong>20–108 m (65–350 ft) commercial vessels</strong> are in a
+speed-dominated lethality regime where the existing rule provides its
+largest absolute benefit (3.3× per-encounter lethality reduction).</li>
+<li><strong>&lt; 20 m recreational and small-fishing vessels</strong>
+are currently exempt but contribute documented strike mortality (Laist
+et al. 2001; Sharp et al. 2019), particularly to neonates and calves on
+the SE U.S. calving grounds (Montes et al. 2020). Strike risk for this
+class is severely under-quantified due to Automatic Identification
+System (AIS) coverage gaps that NMFS should address by extending AIS
+carriage requirements to ≥ 35 ft (Blondin et al. 2025 applied an
+explicit AIS under-representation correction factor for the 26–65 ft
+class of vessls).</li>
+</ul>
+<p><strong>Recommendation:</strong> Extend mandatory speed restrictions
+to most vessels 35 ft - 65 feet per the proposed rule 87 FR 46921
+proposed in 2022 but withdrawn January 8, 2025.</p>
+<h3 id="alternative-management-areas-dynamic-real-time-notification">3.2
+Alternative Management Areas (Dynamic, Real-Time Notification)</h3>
+<p><strong>Position:</strong> Dynamic management should be implemented
+as a <strong>mandatory layer over</strong> the existing static SMAs, not
+as a replacement.</p>
+<p>Rationale: voluntary DMA / Slow Zone compliance has remained at
+10–30% despite a decade of outreach, while mandatory SMA compliance has
+reached 81%. Replacing the static rule with a voluntary compliance would
+decrease <strong>the chances of the species survival by in erasing the
+50–60 percentage-point compliance.</strong></p>
+<p><strong>Specific recommendations:</strong></p>
+<ol type="1">
+<li>Make Dynamic Speed Zones <strong>mandatory</strong> when triggered
+by confirmed visual or acoustic detections.</li>
+<li>Use real-time electronic notification (Whale Alert, AIS broadcast,
+mariner email/SMS). Pilot data suggest a 10–25 percentage-point
+compliance uplift from electronic over passive notification.</li>
+<li>Set notification latency targets ≤ 6 hours from confirmed detection
+to mariner alert.</li>
+<li>Continue investing in TRL-9 offboard detection (PAM, aerial surveys)
+to drive zone triggering and improve detection responsiveness toward
+0.7+.</li>
+<li>Define minimum DSZ activation criteria by vessel size class to
+prevent unintended exclusion of smaller, AIS-invisible craft.</li>
+</ol>
+<h3 id="voluntary-dmas-slow-zones-effectiveness">3.3 Voluntary DMAs /
+Slow Zones Effectiveness</h3>
+<p>The voluntary program serves a useful adjunctive role and should be
+retained where mandatory measures are not yet feasible. However, its
+demonstrated voluntary compliance (10–30%) is too low to serve as a
+primary management tool. AIS-based effectiveness studies (2018–2024)
+consistently show voluntary measures produce marginal speed-distribution
+shifts in active zones.</p>
+<p><strong>Recommendation:</strong> Maintain voluntary DMAs / Slow Zones
+as an adjunct, not a substitute for the mandatory speed rule. Track
+compliance via AIS metrics-of-record published quarterly.</p>
+<h3 id="safety-deviation-provision-50-cfr-224.105c">3.4 Safety Deviation
+Provision (50 CFR 224.105(c))</h3>
+<p><strong>Position:</strong> Provide greater clarity and operational
+flexibility while preserving the core protective intent.</p>
+<p><strong>Specific recommendations:</strong></p>
+<ol type="1">
+<li><strong>Codify objective deviation criteria</strong> to include
+explicit weather-based triggers (Beaufort sea state ≥ 5, sustained winds
+≥ 25 kts, demonstrable swamping/capsizing/loss-of-steerage hazard)
+rather than the current open-ended “safe maneuvering speed”
+language.</li>
+<li><strong>Standardize deviation reporting</strong> through a 48-hour
+electronic filing requirement to enable longitudinal analysis of
+deviation rates and circumstances.</li>
+<li><strong>Differentiate by vessel class.</strong> If the rule is
+extended to 35–65 ft vessels, the deviation rate is expected to be
+substantially higher (~10% vs. ~3% for ≥ 65 ft) due to dynamic-stability
+and freeboard limitations of small craft. This class-specific
+calibration is essential to balance crew safety and whale
+protection.</li>
+<li><strong>Define a maximum deviation speed.</strong> During
+permissible deviations, vessels should not exceed an upper bound (we
+suggest 14 kts) to retain partial lethality reduction even during
+heavy-weather operation.</li>
+<li><strong>Sunset and review.</strong> Build in a 5-year review cycle
+to assess deviation-rate trends against documented strike
+incidents.</li>
+</ol>
+<h3 id="technological-interventions">3.5 Technological
+Interventions</h3>
+<p><strong>Position:</strong> No onboard technology, individually or
+combined, can replace the speed rule at present TRL maturity. Onboard
+technology should be incentivized as a <strong>complement</strong> that
+fills gaps the static rule cannot reach.</p>
+<p><strong>Highest-leverage near-term interventions (TRL 9, deployable
+now):</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Intervention</th>
+<th>TRL</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Whale Alert / Whalemap electronic notification scale-up</td>
+<td>9</td>
+<td>Operational</td>
+</tr>
+<tr class="even">
+<td>Mandatory AIS for 35–65 ft vessels</td>
+<td>9</td>
+<td>Regulatory</td>
+</tr>
+<tr class="odd">
+<td>Expanded PAM + aerial survey coverage</td>
+<td>9</td>
+<td>Operational</td>
+</tr>
+<tr class="even">
+<td>Mandatory Dynamic Speed Zones triggered by 1–3 above</td>
+<td>9</td>
+<td>Pilot-ready</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Medium-term interventions (TRL 5–7 with
+investment):</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Intervention</th>
+<th>TRL</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Thermal/IR onboard cameras as complement to SMA rule</td>
+<td>6</td>
+<td>Demonstrating</td>
+</tr>
+<tr class="even">
+<td>Real-time bow-mounted detection alerting</td>
+<td>5–6</td>
+<td>Demonstrating</td>
+</tr>
+<tr class="odd">
+<td>Smart routing (AIS + Whalemap + weather fusion)</td>
+<td>6–7</td>
+<td>Pilots underway</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Long-term R&amp;D priorities:</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Research priority</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Avoidance-maneuver field studies</td>
+<td><strong>Closes the single largest model uncertainty</strong></td>
+</tr>
+<tr class="even">
+<td>NARW-specific active-acoustic detection validation</td>
+<td>Few NARW-specific studies exist</td>
+</tr>
+<tr class="odd">
+<td>Flow-noise mitigation for onboard PAM at speed</td>
+<td>Unlocks acoustic detection per vessel</td>
+</tr>
+<tr class="even">
+<td>Multi-sensor fusion algorithms with quantified false-alarm
+rates</td>
+<td>Enables alert-fatigue management</td>
+</tr>
+<tr class="odd">
+<td>Climate-prey-shift coupled distribution models</td>
+<td>Forecasts future SMA boundaries</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Economic incentives for adoption:</strong> We recommend NMFS
+coordinate with USCG and Customs to provide port-fee discounts, reduced
+inspection burdens, or insurance credits for vessels equipped with
+multi-sensor detection systems and operating in high-risk corridors,
+while maintaining the speed rule as the mandatory baseline.</p>
+<hr />
+<h2 id="recommended-hybrid-regulatory-architecture">4. Recommended
+Hybrid Regulatory Architecture</h2>
+<p><code>text path=null start=null                   ┌────────────────────────────────────────┐                   │  HYBRID NARW VESSEL-STRIKE FRAMEWORK   │                   └────────────────────────────────────────┘                                        │                 ┌──────────────────────┼──────────────────────┐                 │                      │                      │        ┌────────▼─────────┐    ┌───────▼────────┐    ┌────────▼─────────┐        │   STATIC SMAs    │    │  DYNAMIC DSZs  │    │   ONBOARD TECH   │        │    (mandatory)   │    │   (mandatory)  │    │  (complement)    │        │   ≥ 35 ft, 10kt  │    │  PAM + Aerial  │    │   Thermal/IR +   │        │   85% compliance │    │  triggered;    │    │   Multi-sensor;  │        │   (proven)       │    │  electronic    │    │   incentivized;  │        │                  │    │  notification  │    │   not mandatory  │        └──────────────────┘    └────────────────┘    └──────────────────┘                 │                      │                      │                 └──────────────────────┼──────────────────────┘                                        │                             ┌──────────▼──────────┐                             │ SAFETY DEVIATION    │                             │ Calibrated by class │                             │ 48-hr e-reporting   │                             │ Max 14 kts          │                             └─────────────────────┘</code></p>
+<p><strong>Six-point program:</strong></p>
+<ol type="1">
+<li>Retain the mandatory 10-knot SMA rule, expanded to vessels ≥ 35 ft
+per the 2022 Preferred Alternative.</li>
+<li>Layer mandatory Dynamic Speed Zones triggered by TRL-9 offboard
+detection (PAM, aerial surveys), delivered via real-time electronic
+notification.</li>
+<li>Codify a calibrated safety-deviation provision with class-specific
+parameters, weather triggers, and standardized 48-hour reporting.</li>
+<li>Fund the avoidance-maneuver research gap as a near-term agency
+priority.</li>
+<li>Incentivize onboard technology adoption as a complement, not a
+substitute.</li>
+<li>Maintain voluntary DMAs / Slow Zones as an adjunct in unregulated
+areas while the mandatory framework expands.</li>
+</ol>
+<hr />
+<h2 id="closing-statement">5. Closing Statement</h2>
+<p>The North Atlantic right whale population reached an estimated
+<strong>384 individuals at the start of 2024</strong> — a 7% recovery
+from the 2020 trough of 358 but well below the levels needed for
+resilience against climate-driven prey shifts, episodic mortality events
+(such as the 2017 Gulf of St. Lawrence crisis), and stochastic
+environmental variability. Population viability modeling indicates that
+<strong>only sustained recovery-phase parameters</strong> (low
+entanglement mortality, elevated calving rate, low strike mortality)
+yield positive 50-year trajectories under any management scenario.</p>
+<p>Weakening the speed rule’s mandatory scope or compliance reach lead
+to risks of declining population to UME-era rates, losing approximately
+25 whales per year — an unrecoverable trajectory for a population of
+this size.</p>
+<p>The species has no margin for regulatory experimentation that depends
+on unproven detection-and-avoidance assumptions. We urge NMFS to
+<strong>retain the speed rule’s protective effect, expand its scope to
+more vessel classes, layer mandatory dynamic zones on top, and treat
+technology as a complement that fills gaps the static rule cannot
+reach</strong>.</p>
+<p>Respectfully submitted,</p>
+<p><strong>[Submitter name]</strong> [Affiliation] [Email] · [Phone] ·
+[Mailing address]</p>
+<hr />
+<h2 id="references">References</h2>
+<ol type="1">
+<li><p>Blondin, H., Garrison, L. P., Adams, J. D., Roberts, J. J., Good,
+C. P., Gahm, M. P., Lisi, N. E., &amp; Patterson, E. M. (2025). Vessel
+strike encounter risk model informs mortality risk for endangered North
+Atlantic right whales along the United States east coast. <em>Scientific
+Reports</em> 15: 736. doi:10.1038/s41598-024-84886-z</p></li>
+<li><p>Conn, P. B. &amp; Silber, G. K. (2013). Vessel speed restrictions
+reduce risk of striking the endangered North Atlantic right whale.
+<em>Ecosphere</em> 4(4):43. doi:10.1890/ES13-00004.1</p></li>
+<li><p>Crum, N., Gowan, T., Krzystan, A., &amp; Martin, J. (2019).
+Quantifying risk of vessel strike on right whales using a discrete-time
+Cormack- Jolly-Seber model. <em>Ecosphere</em> 10(7): e02780.</p></li>
+<li><p>Garrison, L. P., Adams, J., Patterson, E. M., &amp; Good, C. P.
+(2022). Assessing the risk of vessel strike on North Atlantic right
+whales. <em>Endangered Species Research</em> 47: 117–135.</p></li>
+<li><p>Kelley, D. E., Vlasic, J. P., &amp; Brillant, S. W. (2021).
+Assessing the lethality of ship strikes on whales using simple
+biophysical models. <em>Marine Mammal Science</em> 37(1):
+251–267.</p></li>
+<li><p>Laist, D. W., Knowlton, A. R., Mead, J. G., Collet, A. S., &amp;
+Podesté, M. (2001). Collisions between ships and whales. <em>Marine
+Mammal Science</em> 17(1): 35–75.</p></li>
+<li><p>Laist, D. W., Knowlton, A. R., &amp; Pendleton, D. (2014).
+Effectiveness of mandatory vessel speed limits for protecting North
+Atlantic right whales. <em>Endangered Species Research</em> 23:
+133–147.</p></li>
+<li><p>Linden, D. W. (2024). Population size estimation of North
+Atlantic right whales from 1990–2023. NOAA Technical
+Memorandum.</p></li>
+<li><p>Lisi, N. E., Good, C. P., Garrison, L. P., Gahm, M., Patterson,
+E. M., &amp; Blondin, H. (2025). The effects of vessel speed and size on
+the lethality of strikes of large whales in U.S. waters. <em>Frontiers
+in Marine Science</em> 11: 1467387.
+doi:10.3389/fmars.2024.1467387</p></li>
+<li><p>Kirsch, C. C., Weber, T., &amp; Adams, M. MITRE Corporation
+(2025). Technology Readiness Level Report (TRL) for North Atlantic Right
+Whale Detection and Vessel Strike Risk Reduction. MTR250363. November
+2025</p></li>
+<li><p>Montes, N. L., Swett, R., &amp; Gowan, T. A. (2020). Risk of
+encounters between North Atlantic right whales and recreational vessel
+traffic in the southeastern United States. <em>Ecology and Society</em>
+25(4):12. doi:10.5751/ES-11923-250412</p></li>
+<li><p>NMFS. (2020). North Atlantic Right Whale Vessel Speed Rule
+Assessment. NOAA Office of Protected Resources, June 2020.</p></li>
+<li><p>NMFS. (2022). Draft Environmental Assessment for Amendments to
+the North Atlantic Right Whale Vessel Strike Reduction Rule. NOAA Office
+of Protected Resources, July 2022.</p></li>
+<li><p>Pace, R. M. III, Corkeron, P. J., &amp; Kraus, S. D. (2017).
+State–space mark–recapture estimates reveal a recent decline in
+abundance of North Atlantic right whales. <em>Ecology and Evolution</em>
+7(21): 8730–8741.</p></li>
+<li><p>Pace, R. M. III, Williams, R., Kraus, S. D., Knowlton, A. R.,
+&amp; Pettis, H. M. (2021). Cryptic mortality of North Atlantic right
+whales. <em>Conservation Science and Practice</em> 3(2): e346.</p></li>
+<li><p>Sharp, S. M., McLellan, W. A., Rotstein, D., et al. (2019). Gross
+and histopathologic diagnoses from North Atlantic right whale
+<em>Eubalaena glacialis</em> mortalities between 2003 and 2018.
+<em>Diseases of Aquatic Organisms</em> 135(1): 1–31.</p></li>
+<li><p>Silber, G. K., Slutsky, J., &amp; Bettridge, S. (2010).
+Hydrodynamics of a ship/whale collision. <em>Journal of Experimental
+Marine Biology and Ecology</em> 391(1–2): 10–19.</p></li>
+<li><p>Silber, G. K., Vanderlaan, A. S. M., Tejedor Arceredillo, A.,
+Johnson, L., Taggart, C. T., Brown, M. W., Bettridge, S., &amp;
+Sagarminaga, R. (2012). The role of the International Maritime
+Organization in reducing vessel threat to whales: process, options,
+action and effectiveness. <em>Marine Policy</em> 36(6):
+1221–1233.</p></li>
+<li><p>Vanderlaan, A. S. M. &amp; Taggart, C. T. (2007). Vessel
+collisions with whales: the probability of lethal injury based on vessel
+speed. <em>Marine Mammal Science</em> 23(1): 144–156.
+doi:10.1111/j.1748-7692.2006.00098.x</p></li>
+<li><p>van der Hoop, J. M., Vanderlaan, A. S. M., Cole, T. V. N., Henry,
+A. G., Hall, L., Mase-Guthrie, B., Wimmer, T., &amp; Moore, M. J.
+(2015). Vessel strikes to large whales before and after the 2008 Ship
+Strike Rule. <em>Conservation Letters</em> 8(1): 24–32.</p></li>
+</ol>
+<hr />
+<h2 id="appendix-a-population-viability-modeling-methodology">Appendix A
+— Population Viability Modeling Methodology</h2>
+<p>The quantitative claims in this comment are supported by a Monte
+Carlo population viability model implemented in
+<code>narw_model_v2a.py</code>. Key methodological elements:</p>
+<ul>
+<li><strong>Demographic structure:</strong> Logistic births capped by
+carrying capacity K=1000; binomial natural and entanglement mortality;
+Poisson encounter and strike processes.</li>
+<li><strong>Strike lethality:</strong> Three-regime function
+(<code>strike_lethality</code>) following Lisi et al. (2025) with
+vessel-size-class branches: ≥ 108 m (mass-dominated), 20–108 m
+(Vanderlaan &amp; Taggart 2007 logistic), &lt; 20 m (right-shifted
+recreational).</li>
+<li><strong>Strike probability:</strong> Linear-in-speed term with
+multiplicative draft and maneuverability modifiers
+(<code>strike_probability_given_encounter</code>) parameterized from
+Blondin et al. (2025).</li>
+<li><strong>Hindcast calibration:</strong> Phase-varying parameters
+(pre-UME 2011–2016, UME 2017–2020, recovery 2021–2024) reproduce the
+observed NARW Consortium / NOAA series within mean absolute error 2.0%
+and maximum error 6.6%.</li>
+<li><strong>Forward projections:</strong> 50-year horizons starting from
+2024 N₀=384, with 2,000 Monte Carlo runs per scenario.</li>
+<li><strong>Sensitivity analysis:</strong> Avoidance-success rate swept
+across the empirically defensible range [10%, 20%, 30%, 40%, 50%].
+Values above 50% (<code>MAX_AVOIDANCE_SUCCESS</code>) are not reported
+because the unstudied status of vessel-avoidance maneuvers (MITRE 2025)
+does not support them. The cap is enforced via dataclass
+<code>__post_init__</code> so any caller passing values &gt; 50%
+receives the capped value, preventing accidentally indefensible
+runs.</li>
+</ul>
+<p>Source code, calibrated parameters, and full reference bibliography
+are available at: [project repository URL or attachment].</p>
