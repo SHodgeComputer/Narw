@@ -2,8 +2,11 @@
 ## North Atlantic Right Whale Vessel Strike Reduction Rule (50 CFR 224.105)
 
 **Federal Register Docket:** NOAA-NMFS-2026-XXXX (ANPRM, March 2026)
-**Submitting Author:** [Submitter name, affiliation, contact]
-**Date:** [Submission date]
+
+**Submitting Author:** Steven Hodge, shodge@computer.org
+
+**Date:** May 23, 2026
+
 **Comment Period Closes:** June 2, 2026
 
  ## Executive Summary
@@ -527,4 +530,5 @@ methodological elements:
   indefensible runs.
 
 Source code, calibrated parameters, and full reference bibliography are
-available at: [project repository URL or attachment].
+available at: https://github.com/SHodgeComputer/Narw
+
