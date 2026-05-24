@@ -15,7 +15,7 @@ scenarios for protecting the critically endangered North Atlantic right whale
    slow zones.
 
 ## Files
-- `narw_model_v2a.py` — Main simulation (calibrated baseline + historical hindcast).
+- `narw_model_v2a.py` — Main simulation (calibrated baseline + historical hindcast)
 ## Running
 ```bash
 python narw_model_v2a.py          # Run main simulation + plot
